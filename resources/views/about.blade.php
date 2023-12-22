@@ -20,7 +20,7 @@
                 </p>
                 <div class="btn">
                     <button type="button">Our Team</button>
-                    <button type="button" class="btn2" id="uploadButton">Upload Now</button>
+                    <button type="button" class="btn2" id="uploadButton" onclick="redirectToLink()">Upload Now</button>
                 </div>
             </div>
         </div>
@@ -30,8 +30,9 @@
 
 @section('script')
     <script>
-        document.getElementById('uploadButton').addEventListener('click', function() {
+        function redirectToLink() {
+        // Ganti URL tautan yang diinginkan di bawah ini
             window.location.href = "{{ route('dashboard') }}";
-        });
+        }
     </script>
 @endsection

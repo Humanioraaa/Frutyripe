@@ -1,0 +1,917 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+    background: #2A4BA0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+}
+
+.logo{
+    width: 75px;
+    height: auto;
+    margin-left: 30px;
+}
+
+.logo img{
+    width: 55px;
+    height: auto;
+}
+
+.logo-title{
+    font-family: 'Expletus Sans', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    /* background: w;
+    -webkit-background-clip: text; Menerapkan background hanya pada teks */
+    color: white; /* Membuat teks menjadi transparan agar gradient terlihat */
+    /* display: inline-block; Mengatasi masalah dengan background-clip di beberapa browser */
+    align-items: center;
+    position: absolute;
+    left: 45%;
+    letter-spacing: 1.5px;
+    
+}
+
+.logo-title span{
+    color: #F9B023;
+    font-weight: bold;
+    font-family: 'Expletus Sans', sans-serif;
+}
+
+nav ul{
+    margin-right: 30px;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+nav a{
+    color: #F8F9FB;
+    font-size: 16px;
+    font-weight: 580;
+    letter-spacing: 1px;
+    border: 1.5px solid transparent;
+    padding: 3px 7px;
+    border-radius: 3px;
+}
+
+nav ul li i{
+    cursor: pointer;
+}
+
+a.active,a:hover{
+    border: 1.5px solid #F8F9FB;
+    transition: 0.5s;
+}
+
+nav #icon-menu{
+    display: none;
+}
+nav label i{
+    margin-right: 30px;
+    color: #F8F9FB;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+
+nav i{
+    color: #F8F9FB;
+}
+
+.wrapper{
+    margin: 50px auto;
+    background: #2A4BA0;
+    width: 450px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.wrapper header{
+    color: #F8F9FB;
+    font-size: 20px;
+    text-align: center;
+}
+
+.wrapper form{
+    height: 167px;
+    width: 100%;
+    display: flex;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px dashed #F8F9FB;
+    cursor: pointer;
+}
+
+form :where(i, p){
+    color: #F8F9FB;
+}
+form i{
+    font-size: 40px;
+}
+
+form p{
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+section .row{
+    background: #153075;
+    margin-bottom: 10px;
+    width: 415px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #F8F9FB;
+}
+
+section .row i{
+    font-size: 24px;
+    color: #E2A300;
+}
+
+section .details span{
+    font-size: 14px;
+}
+
+.progress-area .row .content{
+    width: 100%;
+    margin-left: 15px;
+}
+
+.progress-area .details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.uploaded-area .row .content{
+    display: flex;
+    align-items: center;
+}
+
+.uploaded-area .row .details{
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+}
+
+.progress-area .progress-bar{
+    height: 6px;
+    width: 100%;
+    background: #2A4BA0;
+    margin-top: 7px;
+    margin-bottom: 4px;
+    border-radius: 30px;
+}
+
+.progress-bar .progress{
+    height: 100%;
+    width: 0%;
+    background: #E2A300;
+    border-radius: inherit;
+}
+
+.uploaded-area{
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.uploaded-area::-webkit-scrollbar{
+    width: 0px;
+}
+
+.uploaded-area .details .size{
+    font-size: 10px;
+}
+
+.uploaded-area .fa-check{
+    color: #E2A300;
+    font-size: 20px;
+}
+
+.wrapper button{
+    padding: 5px 8px;
+    background-color: #2A4BA0;
+    color: #FFFFFF;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border: none;
+    border: 2px solid #F8F9FB;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Manrope', sans-serif;
+    margin-left: auto; /* Menempatkan tombol di sebelah kanan */
+    display: block; /* Menyelesaikan masalah inline-block space */
+}
+
+.wrapper button:hover {
+    background-color: #E2A300;
+    font-weight: 600px;
+}
+
+.big-title{
+    font-size: 40px;
+    font-family: Manrope;
+    font-weight: 800;
+    line-height: 62.55px;
+    color: #2A4BA0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.medium-title{
+    font-size: 20px;
+    font-family: Manrope;
+    font-weight: 400;
+    line-height: 30.02px;
+    color: #2A4BA0;
+    text-align: center;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.content-banana,
+.content-apple,
+.content-orange,
+.content-papaya,
+.content-snakefruit,
+.content-pineapple,
+.content-strawberry{
+    width: 154px; 
+    height: 164px;  
+    border-radius: 12px;
+    margin: 40px;
+    position: relative;
+    transition: .5s;
+}
+
+.content-banana{
+    background: rgba(226, 163, 0, 0.40);
+}
+
+.content-apple{
+    background: rgba(194, 4, 11, 0.40);
+}
+
+.content-orange{
+    background: rgba(231, 137, 1, 0.40);
+}
+
+.content-papaya{
+    background: rgba(254, 96, 5, 0.40);
+}
+
+.content-snakefruit{
+    background: rgba(153, 77, 28, 0.40);
+}
+
+.content-pineapple{
+    background: rgba(255, 156.83, 0, 0.40);
+}
+
+.content-strawberry{
+    background: rgba(204, 17, 1, 0.40);
+}
+
+.content-watermelon{
+    background: rgba(47, 114, 10, 0.40);
+}
+
+.content-banana:hover,
+.content-apple:hover,
+.content-orange:hover,
+.content-papaya:hover,
+.content-snakefruit:hover,
+.content-pineapple:hover,
+.content-strawberry:hover{
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transform:translate(0px, -8px);
+}
+
+
+.circle-banana,
+.circle-apple,
+.circle-orange,
+.circle-papaya,
+.circle-snakefruit,
+.circle-pineapple,
+.circle-strawberry{
+    width: 60%; 
+    height: 60%; 
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.circle-banana{
+    background: #E2A300; 
+}
+
+.circle-apple{
+    background: #C2040B;
+}
+
+.circle-orange{
+    background: #E78901;
+}
+
+.circle-papaya{
+    background: #FE6005;
+}
+
+.circle-snakefruit{
+    background: #994D1C; 
+}
+
+.circle-pineapple{
+    background: #FF9D00;
+}
+
+.circle-strawberry{
+    background: #CC1101;
+}
+
+.content-banana img,
+.content-apple img,
+.content-orange img,
+.content-papaya img,
+.content-snakefruit img,
+.content-strawberry img{
+    width: 130px;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.content-pineapple img{
+    width: 90px;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.content-banana p,
+.content-apple p,
+.content-orange p,
+.content-papaya p,
+.content-snakefruit p,
+.content-pineapple p,
+.content-strawberry p{
+    font-size: 15px;
+    font-family: Manrope;
+    font-weight: 600;
+    line-height: 30.02px;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.content-banana p{
+    color: #E2A300;
+}
+
+.content-apple p{
+    color: #C2040B;
+}
+
+.content-orange p{
+    color: #E78901;
+}
+
+.content-papaya p{
+    color: #FE6005;
+}
+
+.content-snakefruit p{
+    color: #994D1C;
+}
+
+.content-pineapple p{
+    color: #FF9D00;
+}
+
+.content-strawberry p{
+    color: #CC1101;
+}
+
+/* responsive */
+@media (max-width: 1048px){
+    .logo{
+        width: 75px;
+        height: auto;
+        margin-left: 30px;
+    }
+
+    nav ul{
+        margin-right: 20px;
+    }
+
+    .logo-title{
+        font-family: 'Expletus Sans', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        /* background: w;
+        -webkit-background-clip: text; Menerapkan background hanya pada teks */
+        color: white; /* Membuat teks menjadi transparan agar gradient terlihat */
+        /* display: inline-block; Mengatasi masalah dengan background-clip di beberapa browser */
+        align-items: center;
+        position: absolute;
+        left: 45%;
+        letter-spacing: 1.5px;
+        
+    }
+    
+    .logo-title span{
+        color: #F9B023;
+        font-weight: bold;
+        font-family: 'Expletus Sans', sans-serif;
+    }
+}
+
+
+@media (max-width: 850px){
+    body{
+        z-index: 1;
+    }
+
+    .logo-title{
+        font-family: 'Expletus Sans', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        /* background: w;
+        -webkit-background-clip: text; Menerapkan background hanya pada teks */
+        color: white; /* Membuat teks menjadi transparan agar gradient terlihat */
+        /* display: inline-block; Mengatasi masalah dengan background-clip di beberapa browser */
+        align-items: center;
+        letter-spacing: 1.5px;
+        
+    }
+    
+    .logo-title span{
+        color: #F9B023;
+        font-weight: bold;
+        font-family: 'Expletus Sans', sans-serif;
+    }
+    
+    nav #icon-menu{
+        display: block;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #153075;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: .5s;
+        z-index: 4;
+    }
+
+    nav li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    
+    a.active,a:hover{
+        border: none;
+        color: #F9B023;
+        transition: 0.5s;
+    }
+
+    i.active,i:hover{
+        color: #F9B023;
+        transition: 0.5s;
+    }
+
+    nav ul.show{
+        left: 0;
+    }
+
+    .wrapper{
+        margin: 50px auto;
+        background: #2A4BA0;
+        width: 350px;
+        padding: 30px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .wrapper form{
+        height: 167px;
+        width: 100%;
+        display: flex;
+        margin: 30px 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 5px;
+        border: 2px dashed #F8F9FB;
+        cursor: pointer;
+    }
+
+    section .row{
+        background: #153075;
+        margin-bottom: 10px;
+        width: 315px;
+        padding: 15px 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #F8F9FB;
+    }
+
+    .big-title{
+        font-size: 35px;
+        font-family: Manrope;
+        font-weight: 800;
+        line-height: 62.55px;
+        color: #2A4BA0;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .medium-title{
+        font-size: 15px;
+        font-family: Manrope;
+        font-weight: 400;
+        line-height: 30.02px;
+        color: #2A4BA0;
+        text-align: center;
+    }
+    
+}
+
+@media(max-width: 650px){
+    .logo-title{
+        font-family: 'Expletus Sans', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        /* background: w;
+        -webkit-background-clip: text; Menerapkan background hanya pada teks */
+        color: white; /* Membuat teks menjadi transparan agar gradient terlihat */
+        /* display: inline-block; Mengatasi masalah dengan background-clip di beberapa browser */
+        align-items: center;
+        position: absolute;
+        left: 35%;
+        letter-spacing: 1.5px;
+        
+    }
+    
+    .logo-title span{
+        color: #F9B023;
+        font-weight: bold;
+        font-family: 'Expletus Sans', sans-serif;
+    }
+}
+
+@media(max-width: 500px){
+    .logo-title{
+        font-family: 'Expletus Sans', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        /* background: w;
+        -webkit-background-clip: text; Menerapkan background hanya pada teks */
+        color: white; /* Membuat teks menjadi transparan agar gradient terlihat */
+        /* display: inline-block; Mengatasi masalah dengan background-clip di beberapa browser */
+        align-items: center;
+        position: absolute;
+        left: 38%;
+        letter-spacing: 1.5px;
+        
+    }
+    
+    .logo-title span{
+        color: #F9B023;
+        font-weight: bold;
+        font-family: 'Expletus Sans', sans-serif;
+    }
+
+    .gallery{
+        margin: 10px 0;
+    }
+
+    .content-banana,
+    .content-apple,
+    .content-orange,
+    .content-papaya,
+    .content-snakefruit,
+    .content-pineapple,
+    .content-strawberry{
+        width: 134px; 
+        height: 144px;  
+        border-radius: 12px;
+        margin: 20px;
+        position: relative;
+        transition: .5s;
+    }
+
+    .content-banana img,
+    .content-apple img,
+    .content-orange img,
+    .content-papaya img,
+    .content-snakefruit img,
+    .content-strawberry img{
+        width: 110px;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .content-pineapple img{
+        width: 70px;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .content-banana p,
+    .content-apple p,
+    .content-orange p,
+    .content-papaya p,
+    .content-snakefruit p,
+    .content-pineapple p,
+    .content-strawberry p{
+        font-size: 13px;
+        font-family: Manrope;
+        font-weight: 450;
+        line-height: 30.02px;
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+    }
+
+    .wrapper{
+        margin: 50px auto;
+        background: #2A4BA0;
+        width: 300px;
+        padding: 30px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .wrapper form{
+        height: 167px;
+        width: 100%;
+        display: flex;
+        margin: 30px 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 5px;
+        border: 2px dashed #F8F9FB;
+        cursor: pointer;
+    }
+
+    section .row{
+        background: #153075;
+        margin-bottom: 10px;
+        width: 265px;
+        padding: 15px 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #F8F9FB;
+    }
+}
+
+@media(max-width: 400px){
+    .logo-title{
+        font-weight: bold;
+        font-size: 24px;
+        align-items: center;
+        position: absolute;
+        left: 34%;
+        letter-spacing: 1.5px;
+        
+    }
+
+    .logo{
+        width: 50px;
+        height: auto;
+        margin-left: 20px;
+    }
+    
+    .logo img{
+        width: 35px;
+        height: auto;
+    }
+
+    .big-title{
+        font-size: 30px;
+        line-height: 45px;
+    }
+    
+    .medium-title{
+        font-size: 15px;
+    }
+
+    .gallery{
+        margin: 10px 0;
+    }
+
+    .content-banana,
+    .content-apple,
+    .content-orange,
+    .content-papaya,
+    .content-snakefruit,
+    .content-pineapple,
+    .content-strawberry{
+        width: 134px; 
+        height: 144px;  
+        border-radius: 12px;
+        margin: 20px;
+        position: relative;
+        transition: .5s;
+    }
+
+    .content-banana img,
+    .content-apple img,
+    .content-orange img,
+    .content-papaya img,
+    .content-snakefruit img,
+    .content-strawberry img{
+        width: 110px;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .content-pineapple img{
+        width: 70px;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .content-banana p,
+    .content-apple p,
+    .content-orange p,
+    .content-papaya p,
+    .content-snakefruit p,
+    .content-pineapple p,
+    .content-strawberry p{
+        font-size: 13px;
+        font-family: Manrope;
+        font-weight: 450;
+        line-height: 30.02px;
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+    }
+    
+    .wrapper{
+        margin: 20px auto;
+        background: #2A4BA0;
+        width: 250px;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .wrapper form{
+        height: 167px;
+        width: 100%;
+        display: flex;
+        margin: 20px 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 5px;
+        border: 2px dashed #F8F9FB;
+        cursor: pointer;
+    }
+
+    section .row{
+        background: #153075;
+        margin-bottom: 10px;
+        width: 210px;
+        padding: 15px 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #F8F9FB;
+    }
+
+    .wrapper header{
+        color: #F8F9FB;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    form p{
+        font-size: 10px;
+        margin-top: 15px;
+    }
+
+    .wrapper button{
+        font-size: 12px;
+    }
+
+    .uploaded-area .details .name{
+        font-size: 8px;
+    }
+    
+    .uploaded-area .details .size{
+        font-size: 8px;
+    }
+    
+    .uploaded-area .fa-check{
+        color: #E2A300;
+        font-size: 10px;
+    }
+}
+
