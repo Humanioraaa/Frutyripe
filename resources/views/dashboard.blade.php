@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('head')
-    <link rel="stylesheet" href="https://storage.googleapis.com/frutyripe.appspot.com/public/css/home2.css">
+    <link rel="stylesheet" href="https://storage.googleapis.com/frutyripe.appspot.com/public/css/home.css">
     <title>Dashboard</title>
 @endsection
 
@@ -27,20 +27,20 @@
             <img src="{{ asset('images/apple-usa.png') }}" alt="">
             <p>Apple</p>
         </div>
-        <div class="content-mango">
-            <div class="circle-mango"></div>
-            <img src="{{ asset('images/mango.png') }}" alt="">
-            <p>Mango</p>
+        <div class="content-orange">
+            <div class="circle-orange"></div>
+            <img src="{{ asset('images/orange.png') }}" alt="">
+            <p>Orange</p>
         </div>
         <div class="content-papaya">
             <div class="circle-papaya"></div>
             <img src="{{ asset('images/papaya.png') }}" alt="">
             <p>Papaya</p>
         </div>
-        <div class="content-avocado">
-            <div class="circle-avocado"></div>
-            <img src="{{ asset('images/avocado.png') }}" alt="">
-            <p>Avocado</p>
+        <div class="content-snakefruit">
+            <div class="circle-snakefruit"></div>
+            <img src="{{ asset('images/snakefruit.png') }}" alt="">
+            <p>Salak</p>
         </div>
         <div class="content-pineapple">
             <div class="circle-pineapple"></div>
@@ -68,11 +68,16 @@
         </form>
         <section class="progress-area"></section>
         <section class="uploaded-area"></section>
-        <button type="button" id="externalButton" class="externalButton">Identify Now</button>
+        <button type="button" id="externalButton" class="externalButton" onclick="redirectToExternalURL()">Identify Now</button>
     </div>
 @endsection
 
 @section('script')
+    <script>
+        function redirectToExternalURL() {
+            window.location.href = 'http://34.122.212.64:5000/';
+        }
+    </script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://storage.googleapis.com/frutyripe.appspot.com/public/js/uploadImage.js"></script>
